@@ -1,0 +1,31 @@
+<header class="company-header">
+
+  <div class="header-top">
+    <div class="marquee">
+      <span>📢 Dikkat! Lastik değişiminde kış ayı kampanyası devam ediyor!</span>
+    </div>
+  </div>
+
+  <div class="headerBottom">
+
+    <div class="logo">
+      <img src="/canvetlogo.png" [routerLink]="['/anasayfa']" (click)="closeMenu() " style="cursor:pointer;" alt="LOGO">
+    </div>
+
+    <!-- HAMBURGER MENU ICON -->
+    <div class="hamburger" (click)="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <!-- MENU LINKS -->
+    <div class="menu-links" [class.open]="isMenuOpen">
+      <ul>
+        <li [routerLink]="['/anasayfa']" (click)="closeMenu()">Anasayfa</li>
+        <li [routerLink]="['/iletisim']" (click)="closeMenu()">İletişim</li>
+      </ul>
+    </div>
+
+  </div>
+</header>

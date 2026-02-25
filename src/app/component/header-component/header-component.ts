@@ -13,7 +13,11 @@ import { RouterModule } from '@angular/router';
   styleUrl: './header-component.css',
 })
 export class HeaderComponent implements AfterViewInit {
-
+  products = [
+    { name: 'Burger', price: '₺245', img: '/slide1.jpg' },
+    { name: 'Pizza', price: '₺125', img: '/slide2.jpg' },
+    { name: 'Tost', price: '₺100', img: '/slide3.jpg' }
+  ];
 
   ngAfterViewInit(): void {
     // Slider başlat
@@ -23,6 +27,18 @@ export class HeaderComponent implements AfterViewInit {
       spaceBetween: 20,
       freeMode: true // mouse ve touch drag
     });
+  }
+
+  faSearch = faMagnifyingGlass;
+
+  isMenuOpen = false;
+
+  toggleMenu() {
+    this.isMenuOpen = !this.isMenuOpen;
+  }
+
+  closeMenu() {
+    this.isMenuOpen = false;
   }
 
 

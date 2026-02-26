@@ -1,6 +1,7 @@
 .vet-profile {
+    font-family: "Montserrat", sans-serif;
     width: 100%;
-    background-color: #f8f8f8;
+    background-color: #ffffff;
 }
 
 .container {
@@ -10,6 +11,71 @@
     align-items: center;
     justify-content: center;
     gap: 60px;
+}
+
+.slider {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.slides {
+  width: 100%;
+  display: flex;
+  transition: 0.3s ease-out;
+}
+
+.slide {
+  min-width: 100%;
+  user-select: none;
+}
+
+.slide img {
+  width: 100%;
+  height: auto;
+  display: block;
+  pointer-events: none;
+}
+
+.dotcontainer {
+  height: 20px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: #000000;
+}
+
+.dots {
+  background-color: #000;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  z-index: 10;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.2s;
+  background: #ffffff;
+}
+
+.dot.active {
+  background: rgb(255, 0, 0);
+}
+
+
+.canvet h1 {
+    font-size: 40px;
 }
 
 /* RESİM */
@@ -27,6 +93,25 @@
     justify-content: center;
 }
 
+.canvet {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.canvet h2 {
+    font-size: 22px;
+    font-weight: 400;
+    margin: 0;
+    letter-spacing: 2px;
+}
+
+.canvet h1 {
+    font-size: 42px;
+    font-weight: 600;
+    margin: 5px 0 0 0;
+}
+
 .vet-info h2 {
     font-size: 22px;
     font-weight: 400;
@@ -40,19 +125,485 @@
     margin: 5px 0 0 0;
 }
 
+.service-cards {
+    position: relative;
+    overflow: hidden;
+    background-color: #363636;
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 80px;
+}
+
+.service-cards2 {
+    position: relative;
+    /* EKLENDİ */
+    overflow: hidden;
+    /* EKLENDİ */
+    background-color: #000000;
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 80px;
+}
+
+.service-header {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.service-header p {
+    font-size: 50px;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.service-header2 p {
+    font-size: 50px;
+    font-weight: 700;
+    color: #f0b512;
+}
+
+
+.cards {
+    position: relative;
+    /* EKLENDİ */
+    z-index: 2;
+    /* EKLENDİ */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+/* ===================== */
+/* ARICILIK DEKOR HAREKET */
+/* ===================== */
+
+.float-hive {
+    position: absolute;
+    width: 260px;
+    left: 0px;
+    top: 50px;
+    z-index: 1;
+    pointer-events: none;
+
+    animation: floatY 6s ease-in-out infinite,
+        driftX 10s ease-in-out infinite;
+}
+
+.float-bees {
+    position: absolute;
+    width: 260px;
+    right: 0px;
+    top: 50px;
+    z-index: 1;
+    pointer-events: none;
+
+    animation: floatY2 5s ease-in-out infinite,
+        driftX2 9s ease-in-out infinite;
+}
+
+/* Yukarı aşağı süzülme */
+@keyframes floatY {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
+}
+
+@keyframes driftX {
+
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+
+    50% {
+        transform: translateX(12px);
+    }
+}
+
+/* İkinci görsel için farklı faz */
+@keyframes floatY2 {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-22px);
+    }
+}
+
+@keyframes driftX2 {
+
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+
+    50% {
+        transform: translateX(-15px);
+    }
+}
+
+/* ======================= */
+/* HİZMETLER DEKOR HAREKET */
+/* ======================= */
+
+.float-cow {
+    position: absolute;
+    width: 200px;
+    left: 20px;
+    top: 100px;
+    z-index: 1;
+    pointer-events: none;
+
+    animation: floatY 7s ease-in-out infinite,
+        driftX 12s ease-in-out infinite;
+}
+
+.float-sheep {
+    position: absolute;
+    width: 200px;
+    right: 10px;
+    top: 100px;
+    z-index: 1;
+    pointer-events: none;
+
+    animation: floatY2 6s ease-in-out infinite,
+        driftX2 11s ease-in-out infinite;
+}
+
+/* Aynı animasyonları kullanıyoruz */
+
+@keyframes floatY {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-18px);
+    }
+}
+
+@keyframes driftX {
+
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+
+    50% {
+        transform: translateX(14px);
+    }
+}
+
+@keyframes floatY2 {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-22px);
+    }
+}
+
+@keyframes driftX2 {
+
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+
+    50% {
+        transform: translateX(-16px);
+    }
+}
+
+.card {
+    width: 300px;
+    height: 400px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.8);
+}
+
+.card1 {
+    background-image: url('/card1.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.card2 {
+    background-image: url('/card2.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.card3 {
+    background-image: url('/card3.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+.card4 {
+    background-image: url('/card4.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.card5 {
+    background-image: url('/card5.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.card6 {
+    background-image: url('/card6.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.card7 {
+    background-image: url('/card7.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.card8 {
+    background-image: url('/card8.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+.card-header {
+    color: #f8f8f8;
+    font-size: 30px;
+    font-weight: 750;
+    margin: 10px 20px;
+}
+
+.card-text {
+    color: #f8f8f8;
+    font-size: 15px;
+    font-weight: 500;
+    margin: 0px 10px;
+}
+
+.parallax {
+    min-height: 40vh;
+    background-image: url('/arkaplan.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+}
+
+.map-wrapper {
+    width: 100%;
+    height: 550px;
+    position: relative;
+    overflow: hidden;
+}
+
+.map-wrapper iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+
 /* MOBİL */
 @media (max-width: 768px) {
     .container {
+        width: 100%;
+        margin: 0 auto;
+        display: flex;
         flex-direction: column;
-        text-align: center;
-        gap: 30px;
+        align-items: center;
+        justify-content: center;
+        gap: 0px;
     }
 
+    /* RESİM */
     .vet-image img {
         width: 250px;
+        height: auto;
+        border-radius: 20px;
+        object-fit: cover;
+    }
+
+    /* YAZI */
+    .vet-info {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 40px 0px;
+    }
+
+    .vet-info h2 {
+        font-size: 14px;
+        font-weight: 500;
+        margin: 0;
+        letter-spacing: 2px;
     }
 
     .vet-info h1 {
-        font-size: 32px;
+        font-size: 38px;
+        font-weight: 700;
+        margin: 5px 0 0 0;
     }
+
+    .canvet{
+        display: none;
+    }
+
+    .service-cards {
+        background-color: #363636;
+        width: auto;
+        height: auto;
+        display: flex;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .service-header {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .service-header p {
+        font-size: 30px;
+        font-weight: 600;
+        color: #fff;
+    }
+
+    .service-header2 p {
+        font-size: 30px;
+        font-weight: 700;
+        color: #ecf012;
+    }
+
+    .cards {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+        margin: auto;
+    }
+
+    .cards {
+        flex-wrap: wrap;
+    }
+
+    .float-hive {
+        width: 170px;
+        left: -70px;
+        top: 10px;
+    }
+
+    .float-bees {
+        width: 170px;
+        right: -70px;
+        top: 10px;
+    }
+
+
+    .float-cow {
+        width: 100px;
+        left: -40px;
+        top: 500px;
+    }
+
+    .float-sheep {
+        width: 100px;
+        right: -40px;
+        top: 100px;
+    }
+
+
+    .card {
+        width: 165px;
+        height: 220px;
+        background-color: #ffffff;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card1 {
+        background-image: url('/card1.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    .card2 {
+        background-image: url('/card2.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    .card3 {
+        background-image: url('/card3.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    .card4 {
+        background-image: url('/card4.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    .card-header {
+        font-size: 18px;
+        font-weight: 750;
+    }
+
+    .card-text {
+        font-size: 8px;
+        font-weight: 600;
+        line-height: 12px;
+        margin: 0px 10px;
+    }
+
 }

@@ -6,9 +6,7 @@
 }
 
 .header-top {
-  background: -webkit-gradient(linear, left bottom, right bottom,
-      color-stop(0, #000),
-      color-stop(1, #cd0909));
+  background-color: #363636;
   color: #fff;
   overflow: hidden;
   white-space: nowrap;
@@ -161,7 +159,7 @@
 
   .headerBottom .logo img {
     margin-left: 10px;
-    width: 75px;
+    width: 100px;
   }
 
   /* Hamburger görünür */

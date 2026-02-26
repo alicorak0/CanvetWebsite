@@ -8,8 +8,9 @@ export const routes: Routes = [
    { path: '', redirectTo: 'anasayfa', pathMatch: 'full' },
    // { path: 'categories/:categoryName', component: WheelsComponent },
  
-     { path: 'anasayfa', component: MainmenuComponent }
-
+     { path: 'anasayfa', component: MainmenuComponent },
+     {path: 'iletisim', component: ContactComponent},
+ 
   
 ];
 

@@ -1,9 +1,9 @@
 .footer {
     background: linear-gradient(to right,
             #000000 0%,
-            #330505 35%,
-            #610808 65%,
-            #910a0a 100%);
+            #1a1a1a 35%,
+            #292929 65%,
+            #494949 100%);
     color: #eeeeee;
     padding: 60px 20px;
     font-family: "Montserrat", sans-serif;

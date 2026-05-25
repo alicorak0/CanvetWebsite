@@ -1,317 +1,596 @@
-.vet-profile {
-    font-family: "Montserrat", sans-serif;
-    width: 100%;
-    background-color: #ffffff;
+.landing-page {
+    padding: 40px 5vw 90px;
 }
 
-.container {
-    width: 100%;
-    margin: 0 auto;
+.hero-section,
+.services-section,
+.gallery-section,
+.specialties-section,
+.visit-section {
+    margin: 0 auto 28px;
+    max-width: 1280px;
+}
+
+.hero-section {
+    display: grid;
+    grid-template-columns: 1.05fr 0.95fr;
+    gap: 28px;
+    align-items: stretch;
+}
+
+.hero-copy,
+.feature-card,
+.services-section,
+.metrics-section,
+.gallery-section,
+.specialty-panel,
+.visit-card,
+.map-panel {
+    border: 1px solid var(--line);
+    box-shadow: var(--shadow);
+}
+
+.hero-copy {
+    padding: 56px;
+    border-radius: 36px;
+    background: linear-gradient(135deg, rgba(255, 253, 249, 0.96), rgba(241, 230, 213, 0.92));
+}
+
+.eyebrow {
+    margin: 0 0 18px;
+    color: var(--accent);
+    text-transform: uppercase;
+    letter-spacing: 0.22em;
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.hero-copy h1,
+.section-heading h2,
+.specialty-panel h2,
+.visit-card h2 {
+    margin: 0;
+    font-family: 'Fraunces', serif;
+    font-weight: 700;
+    line-height: 1.05;
+}
+
+.hero-copy h1 {
+    font-size: clamp(2.8rem, 5vw, 5.4rem);
+}
+
+.hero-text,
+.section-heading,
+.service-card p,
+.feature-card p,
+.specialty-panel p,
+.specialty-panel li,
+.visit-card p,
+.metrics-section span,
+.trust-grid span {
+    color: var(--muted);
+    line-height: 1.7;
+}
+
+.hero-text {
+    margin: 22px 0 0;
+    max-width: 640px;
+    font-size: 18px;
+}
+
+.hero-text-secondary {
+    max-width: 720px;
+    font-size: 16px;
+}
+
+.hero-actions,
+.visit-actions {
     display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-top: 28px;
+}
+
+.primary-action,
+.secondary-action {
+    display: inline-flex;
     align-items: center;
     justify-content: center;
-    gap: 60px;
+    min-height: 52px;
+    padding: 0 24px;
+    border-radius: 999px;
+    font-weight: 800;
+    text-decoration: none;
+    transition: transform 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease;
 }
 
-.slider {
-    position: relative;
-    width: 100%;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    gap: 10px;
+.primary-action {
+    background: var(--surface-dark);
+    color: #fff8f0;
+    box-shadow: 0 16px 34px rgba(24, 53, 47, 0.22);
 }
 
-.slides {
-    width: 100%;
-    display: flex;
-    transition: 0.3s ease-out;
+.secondary-action {
+    background: rgba(24, 53, 47, 0.08);
+    color: var(--surface-dark);
 }
 
-.slide {
-    min-width: 100%;
-    user-select: none;
+.primary-action:hover,
+.secondary-action:hover {
+    transform: translateY(-2px);
 }
 
-.slide img {
-    width: 100%;
-    height: auto;
+.trust-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+    margin-top: 34px;
+}
+
+.trust-grid article {
+    padding: 20px;
+    border-radius: 24px;
+    background: rgba(255, 255, 255, 0.54);
+    border: 1px solid rgba(22, 48, 42, 0.08);
+}
+
+.trust-grid strong,
+.metrics-section strong,
+.service-card h3,
+.feature-card strong {
     display: block;
-    pointer-events: none;
+    color: var(--text);
 }
 
-.dotcontainer {
-    height: 20px;
+.hero-visual {
+    display: grid;
+    grid-template-columns: 1fr 0.92fr;
+    gap: 20px;
+}
+
+.feature-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 32px;
+    background: var(--surface);
+}
+
+.feature-card img {
     width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    background-color: #000000;
-}
-
-.dots {
-    background-color: #000;
-    border-radius: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 8px;
-    z-index: 10;
-}
-
-.dot {
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    cursor: pointer;
-    transition: 0.2s;
-    background: #ffffff;
-}
-
-.dot.active {
-    background: rgb(255, 0, 0);
-}
-
-
-.canvet h1 {
-    font-size: 40px;
-}
-
-/* RESİM */
-.vet-image img {
-    width: 350px;
-    height: auto;
-    border-radius: 20px;
     object-fit: cover;
 }
 
-/* YAZI */
-.vet-info {
+.portrait-card {
+    display: grid;
+    grid-template-rows: minmax(360px, 1fr) auto;
+    background: linear-gradient(180deg, #f5ebe0 0%, #fffdf8 100%);
+}
+
+.portrait-card img {
+    height: 100%;
+    object-position: top center;
+}
+
+.portrait-card div,
+.image-card div {
+    padding: 24px 24px 28px;
+}
+
+.feature-card span,
+.service-card span {
+    font-size: 12px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--accent);
+    font-weight: 800;
+}
+
+.feature-card strong {
+    margin: 10px 0 8px;
+    font-size: 24px;
+}
+
+.visual-stack {
+    display: grid;
+    gap: 20px;
+}
+
+.image-card img {
+    height: 220px;
+}
+
+.image-card.warm {
+    background: #f5ede2;
+}
+
+.image-card.dark {
+    background: linear-gradient(180deg, #24453d 0%, #18352f 100%);
+    color: #f7f2eb;
+}
+
+.field-service-card {
+    display: flex;
+    align-items: stretch;
+    min-height: 220px;
+}
+
+.field-service-card::before,
+.field-service-card::after {
+    content: '';
+    position: absolute;
+    border-radius: 999px;
+    background: rgba(242, 196, 168, 0.12);
+}
+
+.field-service-card::before {
+    width: 180px;
+    height: 180px;
+    top: -42px;
+    right: -46px;
+}
+
+.field-service-card::after {
+    width: 110px;
+    height: 110px;
+    bottom: -18px;
+    left: -24px;
+}
+
+.field-service-card div {
+    position: relative;
+    z-index: 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    min-height: 100%;
 }
 
-.canvet {
-    display: flex;
-    flex-direction: column;
+.image-card.dark div,
+.image-card.dark p,
+.image-card.dark strong {
+    color: inherit;
 }
 
+.image-card.dark span {
+    color: #f2c4a8;
+}
 
-.canvet h2 {
+.services-section,
+.gallery-section,
+.visit-card,
+.map-panel {
+    padding: 34px;
+    border-radius: 32px;
+    background: rgba(255, 253, 249, 0.9);
+}
+
+.section-heading {
+    max-width: 760px;
+    margin-bottom: 24px;
+}
+
+.section-heading h2,
+.specialty-panel h2,
+.visit-card h2 {
+    font-size: clamp(2rem, 3vw, 3.3rem);
+}
+
+.section-heading.compact h2 {
+    max-width: 640px;
+}
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.service-card {
+    padding: 24px;
+    border-radius: 28px;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(241, 230, 213, 0.78));
+    border: 1px solid rgba(22, 48, 42, 0.08);
+}
+
+.service-card h3 {
+    margin: 12px 0 10px;
     font-size: 22px;
-    font-weight: 400;
-    margin: 0;
-    letter-spacing: 2px;
 }
 
-.canvet h1 {
-    font-size: 42px;
-    font-weight: 600;
-    margin: 5px 0 0 0;
-}
-
-.vet-info h2 {
-    font-size: 22px;
-    font-weight: 400;
-    margin: 0;
-    letter-spacing: 2px;
-}
-
-.vet-info h1 {
-    font-size: 42px;
-    font-weight: 600;
-    margin: 5px 0 0 0;
-}
-
-.service-cards {
-    position: relative;
+.metrics-section {
+    max-width: 1280px;
+    margin: 0 auto 28px;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0;
     overflow: hidden;
-    background-color: #363636;
-    width: auto;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding-bottom: 80px;
+    border-radius: 32px;
+    background: linear-gradient(90deg, var(--surface-dark) 0%, var(--surface-dark-alt) 100%);
 }
 
-.service-cards2 {
-    position: relative;
-    /* EKLENDİ */
-    overflow: hidden;
-    /* EKLENDİ */
-    background-color: #000000;
-    width: auto;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding-bottom: 80px;
+.metrics-section article {
+    padding: 28px 30px;
+    border-right: 1px solid rgba(255, 248, 240, 0.12);
 }
 
-.service-header {
-    display: flex;
-    flex-direction: column;
+.metrics-section article:last-child {
+    border-right: 0;
 }
 
-
-.service-header p {
-    font-size: 50px;
-    font-weight: 700;
-    color: #ffffff;
+.metrics-section strong,
+.metrics-section span {
+    color: #f7f1e7;
 }
 
-.service-header2 p {
-    font-size: 50px;
-    font-weight: 700;
-    color: #f0b512;
-}
-
-
-.cards {
-    position: relative;
-    /* EKLENDİ */
-    z-index: 2;
-    /* EKLENDİ */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 30px;
-}
-
-
-.gallery-section {
-    padding: 120px 0;
-    background: transparent;
+.metrics-section strong {
+    margin-bottom: 10px;
+    font-size: 24px;
 }
 
 .gallery-grid {
-    margin: 0px 80px;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 50px;
-    padding: 0 0px;
+    grid-template-columns: 1.1fr 1fr 1fr;
+    gap: 18px;
+    grid-auto-rows: 230px;
 }
 
 .gallery-card {
+    margin: 0;
     overflow: hidden;
-    border-radius: 15px;
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
-    transition: all .4s ease;
+    border-radius: 26px;
 }
 
 .gallery-card img {
     width: 100%;
-    height: auto;
+    height: 100%;
     object-fit: cover;
-    transition: transform .6s ease;
-}
-
-.gallery-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+    transition: transform 0.5s ease;
 }
 
 .gallery-card:hover img {
-    transform: scale(1.02);
+    transform: scale(1.04);
 }
 
-/* ===================== */
-/* ARICILIK DEKOR HAREKET */
-/* ===================== */
+.gallery-card.tall {
+    grid-row: span 2;
+}
 
-.float-hive {
-    position: absolute;
-    width: 260px;
-    left: 0px;
-    top: 50px;
+.gallery-card.wide {
+    grid-column: span 2;
+}
+
+.specialties-section {
+    display: grid;
+    grid-template-columns: 0.95fr 1.05fr;
+    gap: 22px;
+}
+
+.specialty-panel {
+    position: relative;
+    padding: 34px;
+    border-radius: 32px;
+    overflow: hidden;
+}
+
+.clinic-panel {
+    background: linear-gradient(135deg, #fffdf9 0%, #efe2cf 100%);
+}
+
+.apiary-panel {
+    background: linear-gradient(135deg, #1d312c 0%, #2d4c43 100%);
+    color: #f7f1e7;
+}
+
+.apiary-panel p,
+.apiary-panel li,
+.apiary-panel h2 {
+    position: relative;
     z-index: 1;
-    pointer-events: none;
-
-    animation: floatY 6s ease-in-out infinite,
-        driftX 10s ease-in-out infinite;
+    color: inherit;
 }
 
-.float-bees {
+.apiary-panel .eyebrow {
+    color: #f2c4a8;
+}
+
+.specialty-panel ul {
+    margin: 22px 0 0;
+    padding-left: 20px;
+}
+
+.specialty-panel li + li {
+    margin-top: 10px;
+}
+
+.apiary-icon {
     position: absolute;
-    width: 260px;
-    right: 0px;
-    top: 50px;
-    z-index: 1;
     pointer-events: none;
-
-    animation: floatY2 5s ease-in-out infinite,
-        driftX2 9s ease-in-out infinite;
+    opacity: 0.18;
 }
 
-/* Yukarı aşağı süzülme */
-@keyframes floatY {
+.apiary-icon.hive {
+    left: -12px;
+    bottom: -6px;
+    width: 170px;
+}
 
-    0%,
-    100% {
-        transform: translateY(0);
+.apiary-icon.bees {
+    right: -16px;
+    top: 18px;
+    width: 170px;
+}
+
+.visit-section {
+    display: grid;
+    grid-template-columns: 0.92fr 1.08fr;
+    gap: 22px;
+}
+
+.visit-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.map-panel {
+    overflow: hidden;
+    min-height: 380px;
+}
+
+.map-panel iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+    border-radius: 24px;
+}
+
+@media (max-width: 1180px) {
+    .hero-section,
+    .specialties-section,
+    .visit-section {
+        grid-template-columns: 1fr;
     }
 
-    50% {
-        transform: translateY(-15px);
+    .hero-copy {
+        padding: 38px;
+    }
+
+    .hero-visual {
+        grid-template-columns: 1fr;
+    }
+
+    .service-grid,
+    .trust-grid,
+    .metrics-section {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .gallery-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .gallery-card.wide {
+        grid-column: auto;
     }
 }
 
-@keyframes driftX {
-
-    0%,
-    100% {
-        transform: translateX(0);
+@media (max-width: 900px) {
+    .gallery-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
     }
 
-    50% {
-        transform: translateX(12px);
-    }
-}
-
-/* İkinci görsel için farklı faz */
-@keyframes floatY2 {
-
-    0%,
-    100% {
-        transform: translateY(0);
-    }
-
-    50% {
-        transform: translateY(-22px);
+    .gallery-card,
+    .gallery-card.tall,
+    .gallery-card.wide {
+        grid-column: auto;
+        grid-row: auto;
+        aspect-ratio: 1 / 1;
+        height: auto;
     }
 }
 
-@keyframes driftX2 {
-
-    0%,
-    100% {
-        transform: translateX(0);
+@media (max-width: 720px) {
+    .landing-page {
+        padding: 20px 16px 60px;
     }
 
-    50% {
-        transform: translateX(-15px);
+    .hero-section,
+    .hero-visual,
+    .visual-stack,
+    .specialties-section,
+    .visit-section {
+        gap: 16px;
     }
-}
 
-/* ======================= */
-/* HİZMETLER DEKOR HAREKET */
-/* ======================= */
+    .hero-copy,
+    .services-section,
+    .gallery-section,
+    .specialty-panel,
+    .visit-card,
+    .map-panel {
+        padding: 24px;
+        border-radius: 24px;
+    }
 
-.float-cow {
-    position: absolute;
-    width: 200px;
-    left: 20px;
-    top: 100px;
-    z-index: 1;
-    pointer-events: none;
+    .hero-copy h1 {
+        font-size: 2.5rem;
+    }
 
-    animation: floatY 7s ease-in-out infinite,
-        driftX 12s ease-in-out infinite;
+    .gallery-section {
+        padding: 22px 20px;
+    }
+
+    .portrait-card {
+        grid-template-rows: 232px auto;
+    }
+
+    .portrait-card div,
+    .image-card div {
+        padding: 18px 18px 20px;
+    }
+
+    .feature-card strong {
+        font-size: 21px;
+    }
+
+    .feature-card p {
+        margin: 0;
+    }
+
+    .field-service-card {
+        min-height: 190px;
+    }
+
+    .field-service-card::before {
+        width: 132px;
+        height: 132px;
+        top: -32px;
+        right: -36px;
+    }
+
+    .field-service-card::after {
+        width: 84px;
+        height: 84px;
+        left: -18px;
+        bottom: -12px;
+    }
+
+    .service-grid,
+    .trust-grid,
+    .metrics-section,
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-grid {
+        gap: 14px;
+        grid-auto-rows: auto;
+    }
+
+    .metrics-section article {
+        border-right: 0;
+        border-bottom: 1px solid rgba(255, 248, 240, 0.12);
+    }
+
+    .metrics-section article:last-child {
+        border-bottom: 0;
+    }
+
+    .gallery-card,
+    .gallery-card.tall,
+    .gallery-card.wide {
+        grid-column: auto;
+        grid-row: auto;
+        aspect-ratio: 1 / 1;
+        height: auto;
+        border-radius: 22px;
+    }
+
+    .gallery-card img {
+        height: 100%;
+        object-position: center;
+    }
 }
 
 .float-sheep {
@@ -484,14 +763,30 @@
 
 /* MOBİL */
 @media (max-width: 768px) {
+    .slider {
+        margin-bottom: 0;
+    }
+
+    .slide img {
+        height: 240px;
+        object-fit: cover;
+        object-position: center;
+    }
+
     .container {
         width: 100%;
-        margin: 0 auto;
+        margin: 12px auto 0;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
         gap: 0px;
+    }
+
+    .vet-image {
+        display: flex;
+        justify-content: center;
+        margin-top: 0;
     }
 
     /* RESİM */

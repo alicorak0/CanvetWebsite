@@ -1,31 +1,44 @@
-<header class="company-header">
-
-  <div class="header-top">
-    <div class="marquee">
-      <span>Namık Kemal Mahallesi, Arap İbrahim Paşa Cd. NO:98/A, 17010 Çanakkale Merkez/Çanakkale</span>
+<header class="site-header">
+  <div class="info-ribbon">
+    <div class="info-ribbon-track" aria-label="Klinik bilgilendirme bandı">
+      <div class="info-ribbon-item">
+        <span>Çanakkale merkezde modern klinik bakımı, saha desteği ve arıcılık danışmanlığı.</span>
+        <a class="info-ribbon-phone" href="tel:+902862127877">0286 212 78 77</a>
+      </div>
+      <div class="info-ribbon-item" aria-hidden="true">
+        <span>Çanakkale merkezde modern klinik bakımı, saha desteği ve arıcılık danışmanlığı.</span>
+        <a class="info-ribbon-phone" href="tel:+902862127877" tabindex="-1">0286 212 78 77</a>
+      </div>
     </div>
   </div>
 
-  <div class="headerBottom">
+  <div class="nav-shell">
+    <a class="brand" [routerLink]="['/anasayfa']" (click)="closeMenu()" aria-label="Can Vet ana sayfa">
+      <img src="/canvetlogo.png" alt="Can Vet logo">
+    </a>
 
-    <div class="logo">
-      <img src="/canvetlogo.png" [routerLink]="['/anasayfa']" (click)="closeMenu() " style="cursor:pointer;" alt="LOGO">
-    </div>
-
-    <!-- HAMBURGER MENU ICON -->
-    <div class="hamburger" (click)="toggleMenu()">
+    <button class="hamburger" type="button" (click)="toggleMenu()" [attr.aria-expanded]="isMenuOpen"
+      aria-label="Menüyü aç">
       <span></span>
       <span></span>
       <span></span>
-    </div>
+    </button>
 
-    <!-- MENU LINKS -->
-    <div class="menu-links" [class.open]="isMenuOpen">
-      <ul>
-        <li [routerLink]="['/anasayfa']" (click)="closeMenu()">Anasayfa</li>
-        <li [routerLink]="['/iletisim']" (click)="closeMenu()">İletişim</li>
-      </ul>
-    </div>
+    <button class="menu-backdrop" type="button" [class.open]="isMenuOpen" (click)="closeMenu()"
+      aria-label="Menüyü kapat"></button>
 
+    <nav class="menu-links" [class.open]="isMenuOpen" aria-label="Site menüsü">
+      <div class="menu-drawer-links">
+        <button class="menu-close" type="button" (click)="closeMenu()" aria-label="Menüyü kapat">
+          <span></span>
+          <span></span>
+        </button>
+
+        <a routerLink="/anasayfa" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"
+          (click)="closeMenu()">Anasayfa</a>
+        <a routerLink="/iletisim" routerLinkActive="active" (click)="closeMenu()">İletişim</a>
+        <a class="nav-cta" href="tel:+902862127877" (click)="closeMenu()">Randevu Oluştur</a>
+      </div>
+    </nav>
   </div>
 </header>

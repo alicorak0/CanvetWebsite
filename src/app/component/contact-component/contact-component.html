@@ -1,16 +1,41 @@
-<div class="helpcontainer" id="helpcontainer">
-  <div class="title">İletişim</div>
-  <div class="adress">
-    <a class="phone" href="tel:+90 286 212 78 77" ><i class="fas fa-phone-alt"></i> +90 286 212 78 77</a>
+<section class="contact-page">
+  <div class="contact-hero">
+    <p class="eyebrow">İletişim</p>
+    <h1>Can Vet ile hızlıca bağlantı kurun.</h1>
     <p>
-      <i class="fas fa-map-marker-alt"></i>
-      Namık Kemal, Arap İbrahim Paşa Cd. NO:98/A, 17010 Çanakkale Merkez/Çanakkale
+      Randevu planlamak, yol tarifi almak veya bakım süreci hakkında ön bilgi edinmek için bize doğrudan
+      ulaşabilirsiniz.
     </p>
   </div>
 
-</div>
+  <div class="contact-grid">
+    <article class="contact-card accent-card">
+      <span>Telefon</span>
+      <h2>0286 212 78 77</h2>
+      <p>Muayene, kontrol ve danışmanlık için çalışma saatleri içinde doğrudan ulaşabilirsiniz.</p>
+      <a href="tel:+902862127877">Hemen Ara</a>
+    </article>
 
-<div class="map-wrapper">
-  <iframe [src]="googleMapUrl" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy">
-  </iframe>
-</div>
+    <article class="contact-card">
+      <span>Adres</span>
+      <h2>Namık Kemal Mahallesi</h2>
+      <p>Arap İbrahim Paşa Cd. No:98/A, 17010 Çanakkale Merkez / Çanakkale</p>
+      <a href="https://share.google/O31fc6nVx3KN56NcL" target="_blank" rel="noreferrer">Yol Tarifi Al</a>
+    </article>
+
+    <article class="contact-card dark-card">
+      <span>Sosyal Kanallar</span>
+      <h2>Güncel paylaşımlar</h2>
+      <p>Klinik yaşamı ve duyurular için sosyal medya hesaplarımızı ziyaret edebilirsiniz.</p>
+      <div class="social-links">
+        <a href="https://www.instagram.com/canvetveterinerklinigi/" target="_blank" rel="noreferrer">Instagram</a>
+        <a href="https://www.facebook.com/CAN.VETveteriner/?locale=tr_TR" target="_blank" rel="noreferrer">Facebook</a>
+        <a href="https://share.google/O31fc6nVx3KN56NcL" target="_blank" rel="noreferrer">Google</a>
+      </div>
+    </article>
+  </div>
+
+  <div class="contact-map">
+    <iframe [src]="googleMapUrl" title="Can Vet iletişim haritası" loading="lazy"></iframe>
+  </div>
+</section>

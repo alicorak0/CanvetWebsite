@@ -1,35 +1,57 @@
 <footer class="site-footer">
-    <div class="footer-grid">
-        <section class="footer-brand">
-            <img src="/canvetlogobeyaz.png" alt="Can Vet logo">
-            <p>
-                Can Vet, Çanakkale'de koruyucu bakım, klinik değerlendirme ve saha desteğini aynı güven diliyle sunar.
-            </p>
-        </section>
+    <div class="container footer-inner">
+        <div class="footer-columns">
+            <section class="footer-brand">
+                <div class="footer-logo">
+                    <img src="/canvetlogobeyaz.png" alt="Canvet Veteriner Kliniği" loading="lazy">
+                </div>
+                <p>
+                    Canvet Veteriner Kliniği — Çanakkale merkez ve çevre ilçelerde koruyucu hekimlik, saha desteği ve
+                    arıcılık danışmanlığı.
+                </p>
+                <div class="footer-social">
+                    <a href="https://www.instagram.com/canvetveterinerklinigi/" target="_blank" rel="noreferrer noopener" aria-label="Instagram">
+                        <img src="/figma/icon-instagram.svg" alt="" width="18" height="18">
+                    </a>
+                    <a href="https://share.google/O31fc6nVx3KN56NcL" target="_blank" rel="noreferrer noopener" aria-label="Haritada gör">
+                        <img src="/figma/icon-pin-social.svg" alt="" width="18" height="18">
+                    </a>
+                </div>
+            </section>
 
-        <section>
-            <span class="footer-label">Konum</span>
-            <p>Namık Kemal Mahallesi, Arap İbrahim Paşa Cd. No:98/A, 17010 Çanakkale Merkez / Çanakkale</p>
-            <a href="https://share.google/O31fc6nVx3KN56NcL" target="_blank" rel="noreferrer">Haritada Aç</a>
-        </section>
+            <section class="footer-column">
+                <h2 class="footer-heading">Klinik Hizmetleri</h2>
+                <ul class="footer-list">
+                    <li><a routerLink="/anasayfa" fragment="hizmetler">Kedi &amp; Köpek Klinik Muayene</a></li>
+                    <li><a routerLink="/anasayfa" fragment="hizmetler">Saha &amp; Çiftlik Hayvanları Hekimliği</a></li>
+                    <li><a routerLink="/anasayfa" fragment="hizmetler">Arı Hastalıkları &amp; Koloni Sağlığı</a></li>
+                </ul>
+            </section>
 
-        <section>
-            <span class="footer-label">Hızlı Erişim</span>
-            <a routerLink="/anasayfa">Anasayfa</a>
-            <a routerLink="/iletisim">İletişim</a>
-            <a href="tel:+902862127877">0286 212 78 77</a>
-        </section>
-
-        <section>
-            <span class="footer-label">Sosyal</span>
-            <a href="https://www.instagram.com/canvetveterinerklinigi/" target="_blank" rel="noreferrer">Instagram</a>
-            <a href="https://www.facebook.com/CAN.VETveteriner/?locale=tr_TR" target="_blank" rel="noreferrer">Facebook</a>
-            <a href="https://share.google/O31fc6nVx3KN56NcL" target="_blank" rel="noreferrer">Google Profili</a>
-        </section>
+            <section class="footer-column">
+                <h2 class="footer-heading">İletişim &amp; Lokasyon</h2>
+                <ul class="footer-list footer-contact">
+                    <li>
+                        <img src="/figma/icon-pin-16.svg" alt="" width="16" height="16">
+                        <span>Namık Kemal Mah. Arap İbrahim Paşa Cd. No:98/A, 17010 Çanakkale</span>
+                    </li>
+                    <li>
+                        <img src="/figma/icon-phone-16.svg" alt="" width="16" height="16">
+                        <a class="footer-phone" href="tel:+902862127877">0286 212 78 77</a>
+                    </li>
+                </ul>
+                <div class="footer-emergency">
+                    <span>Acil Durum Saha Ekibi</span>
+                    <a href="tel:+902862127877">
+                        Hemen Ara
+                        <img src="/figma/icon-arrow.svg" alt="" width="14" height="14">
+                    </a>
+                </div>
+            </section>
+        </div>
     </div>
 
-    <div class="footer-bottom">
-        <span>Can Vet Veteriner Klinigi</span>
-        <span>Koruyucu bakım, saha desteği ve danışmanlık</span>
+    <div class="container footer-bottom">
+        <span>Copyright © 2026 <a href="https://vaneajans.com" target="_blank" rel="noreferrer">Vane Ajans</a></span>
     </div>
 </footer>

@@ -1,44 +1,94 @@
-<header class="site-header">
-  <div class="info-ribbon">
-    <div class="info-ribbon-track" aria-label="Klinik bilgilendirme bandı">
-      <div class="info-ribbon-item">
-        <span>Çanakkale merkezde modern klinik bakımı, saha desteği ve arıcılık danışmanlığı.</span>
-        <a class="info-ribbon-phone" href="tel:+902862127877">0286 212 78 77</a>
-      </div>
-      <div class="info-ribbon-item" aria-hidden="true">
-        <span>Çanakkale merkezde modern klinik bakımı, saha desteği ve arıcılık danışmanlığı.</span>
-        <a class="info-ribbon-phone" href="tel:+902862127877" tabindex="-1">0286 212 78 77</a>
-      </div>
+<div class="top-bar">
+  <div class="container top-bar-inner">
+    <p class="top-bar-info top-bar-address">
+      <img src="/figma/icon-pin-14.svg" alt="" width="14" height="14">
+      <span>Arap İbrahim Paşa Cd. No:98/A, 17010 Çanakkale</span>
+    </p>
+    <a class="top-bar-info top-bar-phone" href="tel:+902862127877">
+      <img class="top-bar-phone-icon" src="/figma/icon-phone-14.svg" alt="" width="14" height="14">
+      <img class="top-bar-phone-icon-mobile" src="/figma/icon-phone-12.svg" alt="" width="12" height="12">
+      <span>Acil Durum Saha Ekibi · 0286 212 78 77</span>
+    </a>
+  </div>
+</div>
+
+<header class="nav-bar" #navBar>
+  <div class="container nav-inner">
+    <a class="brand" routerLink="/anasayfa" (click)="closeMenu()" aria-label="Canvet ana sayfa">
+      <img src="/canvetlogo.png" alt="Canvet Veteriner Kliniği" width="170" height="51">
+    </a>
+
+    <nav class="nav-links" aria-label="Site menüsü">
+      <a class="nav-link" routerLink="/anasayfa" routerLinkActive="active" [routerLinkActiveOptions]="exactPath">
+        <span>Anasayfa</span>
+        <img class="nav-indicator" src="/figma/nav-indicator.svg" alt="" width="5" height="5">
+      </a>
+      <a class="nav-link" routerLink="/anasayfa" fragment="hizmetler">
+        <span>Hizmetler</span>
+      </a>
+      <a class="nav-link" routerLink="/iletisim" routerLinkActive="active">
+        <span>İletişim</span>
+        <img class="nav-indicator" src="/figma/nav-indicator.svg" alt="" width="5" height="5">
+      </a>
+    </nav>
+
+    <div class="nav-actions">
+      <a class="btn btn-primary nav-cta" routerLink="/iletisim">
+        <img src="/figma/icon-calendar-btn.svg" alt="" width="18" height="18">
+        <span>Randevu Planla</span>
+      </a>
+
+      <a class="icon-button call-button" href="tel:+902862127877" aria-label="Hemen ara">
+        <img src="/figma/icon-phone-fact.svg" alt="" width="20" height="20">
+      </a>
+      <button class="icon-button menu-button" type="button" (click)="toggleMenu()" [attr.aria-expanded]="isMenuOpen"
+        aria-controls="mobile-menu" [attr.aria-label]="isMenuOpen ? 'Menüyü kapat' : 'Menüyü aç'">
+        @if (isMenuOpen) {
+          <img src="/figma/icon-x.svg" alt="" width="20" height="20">
+        } @else {
+          <img src="/figma/icon-menu.svg" alt="" width="20" height="20">
+        }
+      </button>
     </div>
   </div>
 
-  <div class="nav-shell">
-    <a class="brand" [routerLink]="['/anasayfa']" (click)="closeMenu()" aria-label="Can Vet ana sayfa">
-      <img src="/canvetlogo.png" alt="Can Vet logo">
-    </a>
-
-    <button class="hamburger" type="button" (click)="toggleMenu()" [attr.aria-expanded]="isMenuOpen"
-      aria-label="Menüyü aç">
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
-
-    <button class="menu-backdrop" type="button" [class.open]="isMenuOpen" (click)="closeMenu()"
-      aria-label="Menüyü kapat"></button>
-
-    <nav class="menu-links" [class.open]="isMenuOpen" aria-label="Site menüsü">
-      <div class="menu-drawer-links">
-        <button class="menu-close" type="button" (click)="closeMenu()" aria-label="Menüyü kapat">
-          <span></span>
-          <span></span>
-        </button>
-
-        <a routerLink="/anasayfa" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"
-          (click)="closeMenu()">Anasayfa</a>
-        <a routerLink="/iletisim" routerLinkActive="active" (click)="closeMenu()">İletişim</a>
-        <a class="nav-cta" href="tel:+902862127877" (click)="closeMenu()">Randevu Oluştur</a>
-      </div>
+  <div class="mobile-menu" id="mobile-menu" [class.open]="isMenuOpen" [style.height]="menuHeight">
+    <nav class="mobile-menu-links" aria-label="Mobil menü">
+      <a class="mobile-menu-item" routerLink="/anasayfa" routerLinkActive="active"
+        [routerLinkActiveOptions]="exactPath" (click)="closeMenu()">
+        <span class="mobile-menu-label">
+          <img class="mobile-menu-dot" src="/figma/menu-dot.svg" alt="" width="8" height="8">
+          Anasayfa
+        </span>
+        <img src="/figma/icon-arrow-menu.svg" alt="" width="22" height="22">
+      </a>
+      <a class="mobile-menu-item" routerLink="/anasayfa" fragment="hizmetler" (click)="closeMenu()">
+        <span class="mobile-menu-label">Hizmetler</span>
+        <img src="/figma/icon-arrow-menu.svg" alt="" width="22" height="22">
+      </a>
+      <a class="mobile-menu-item" routerLink="/iletisim" routerLinkActive="active" (click)="closeMenu()">
+        <span class="mobile-menu-label">
+          <img class="mobile-menu-dot" src="/figma/menu-dot.svg" alt="" width="8" height="8">
+          İletişim
+        </span>
+        <img src="/figma/icon-arrow-menu.svg" alt="" width="22" height="22">
+      </a>
     </nav>
+
+    <div class="mobile-menu-contact">
+      <p>
+        <img src="/figma/icon-pin-16.svg" alt="" width="16" height="16">
+        <span>Arap İbrahim Paşa Cd. No:98/A, 17010 Çanakkale</span>
+      </p>
+      <a href="tel:+902862127877">
+        <img src="/figma/icon-phone-16.svg" alt="" width="16" height="16">
+        <span>0286 212 78 77</span>
+      </a>
+    </div>
+
+    <a class="btn btn-primary mobile-menu-cta" routerLink="/iletisim" (click)="closeMenu()">
+      <img src="/figma/icon-calendar-btn.svg" alt="" width="18" height="18">
+      <span>Randevu Planla</span>
+    </a>
   </div>
 </header>

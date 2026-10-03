@@ -1,180 +1,208 @@
-<section class="landing-page">
-  <section class="hero-section">
+<!-- Hero -->
+<section class="hero">
+  <div class="hero-deco" aria-hidden="true">
+    <span class="deco deco-blob-1"><img src="/figma/hero-deco-blob-1.svg" alt="" width="364" height="422"></span>
+    <span class="deco deco-blob-2"><img src="/figma/hero-deco-blob-2.svg" alt="" width="303" height="349"></span>
+    <span class="deco deco-blob-3"><img src="/figma/hero-deco-blob-3.svg" alt="" width="328" height="365"></span>
+    <span class="deco deco-fill"><img src="/figma/hero-deco-fill.svg" alt="" width="264" height="303"></span>
+  </div>
+  <div class="hero-deco-mobile" aria-hidden="true">
+    <span class="deco deco-blob-mobile"><img src="/figma/hero-deco-blob-mobile.svg" alt="" width="272" height="419"></span>
+  </div>
+
+  <div class="container hero-inner">
     <div class="hero-copy">
-      <p class="eyebrow">Can Vet Veteriner Klinigi</p>
-      <h1>Evcil dostlar ve çiftlik hayvanları için sakin, güvenli ve modern bakım.</h1>
-      <p class="hero-text">
-        Çanakkale merkezde; klinik muayene, koruyucu hekimlik, saha desteği ve arıcılık danışmanlığını
-        aynı çatı altında buluşturuyoruz.
-      </p>
-      <p class="hero-text hero-text-secondary">
-        Canvet Veteriner Kliniği, Çanakkale veteriner kliniği arayan aileler ve üreticiler için Çanakkale merkez,
-        Lapseki, Ezine, Biga, Bayramiç ve Çardak çevresine hizmet verir.
+      <h1>Çanakkale'de Güvenilir Veteriner Kliniği ve Kapsamlı Bakım</h1>
+      <p class="hero-lead">
+        Çanakkale merkezde; klinik muayene, koruyucu hekimlik, saha desteği ve arıcılık danışmanlığını aynı çatı
+        altında buluşturuyoruz.
       </p>
 
-      <div class="hero-actions">
-        <a class="primary-action" routerLink="/iletisim">Randevu Planla</a>
-        <a class="secondary-action" href="tel:+902862127877">Hemen Ara</a>
-      </div>
-
-      <div class="trust-grid">
-        <article>
-          <strong>Koruyucu yaklaşım</strong>
-          <span>Aşılama, rutin takip ve erken teşhis planlaması.</span>
-        </article>
-        <article>
-          <strong>Saha tecrübesi</strong>
-          <span>Büyükbaş, küçükbaş ve neonatal süreçlerde aktif destek.</span>
-        </article>
-        <article>
-          <strong>Hızlı erişim</strong>
-          <span>Randevu, telefonla ön görüşme ve konum bilgisi tek akışta.</span>
-        </article>
+      <div class="hero-ctas">
+        <a class="btn btn-primary" href="tel:+902862127877">
+          <img src="/figma/icon-phone-btn.svg" alt="" width="18" height="18">
+          <span>Hemen Ara</span>
+        </a>
+        <a class="btn btn-on-dark" [href]="directionsUrl" target="_blank" rel="noreferrer noopener">
+          <img src="/figma/icon-pin-btn.svg" alt="" width="18" height="18">
+          <span>Yol Tarifi</span>
+        </a>
       </div>
     </div>
 
     <div class="hero-visual">
-      <article class="feature-card portrait-card">
-        <img src="/atanarresim.png" alt="Veteriner hekim Atanar Çelik">
-        <div>
-          <span>Veteriner Hekim</span>
-          <strong>Atanar Çelik</strong>
-          <p>Şefkatli iletişimi, sahaya hakimiyeti ve planlı takibiyle kliniğin bakım standardını belirler.</p>
-        </div>
-      </article>
-
-      <div class="visual-stack">
-        <article class="feature-card image-card warm">
-          <img src="/slide1.jpg" alt="Klinik bakım anı">
-          <div>
-            <span>Günlük Klinik Akışı</span>
-            <strong>Muayene, tedavi ve kontrol ziyaretleri</strong>
-          </div>
-        </article>
-        <article class="feature-card image-card dark field-service-card">
-          <div>
-            <span>Saha Hizmeti</span>
-            <strong>İhtiyaca göre yerinde değerlendirme ve uygulama</strong>
-            <p>Büyükbaş ve küçükbaş hayvanlarda yerinde değerlendirme, hızlı müdahale ve süreç takibi.</p>
-          </div>
-        </article>
+      <img class="hero-outline" src="/figma/hero-blob-outline.svg" alt="" width="531" height="596">
+      <img class="hero-outline-mobile" src="/figma/hero-blob-outline-mobile.svg" alt="" width="322" height="356">
+      <div class="hero-photo">
+        <img src="/atanarresim.png" alt="Veteriner Hekim Atanar Çelik" width="1080" height="1080">
       </div>
-    </div>
-  </section>
 
-  <section class="services-section">
-    <div class="section-heading">
-      <p class="eyebrow">Hizmet Alanları</p>
-      <h2>Klinik güvenini, saha deneyimiyle tamamlayan bakım planları</h2>
-    </div>
-
-    <div class="service-grid">
-      <article class="service-card">
-        <span>01</span>
-        <h3>Aşılama ve koruyucu hekimlik</h3>
-        <p>Bölgesel risklere ve yaş grubuna göre planlanan düzenli bağışıklama programları.</p>
-      </article>
-      <article class="service-card">
-        <span>02</span>
-        <h3>Doğum ve jinekolojik takip</h3>
-        <p>Gebelik kontrolü, reprodüksiyon yönetimi ve postpartum değerlendirmeler.</p>
-      </article>
-      <article class="service-card">
-        <span>03</span>
-        <h3>Buzağı ve neonatal bakım</h3>
-        <p>Doğum sonrası ilk kontrol, gelişim takibi ve kritik dönem desteği.</p>
-      </article>
-      <article class="service-card">
-        <span>04</span>
-        <h3>Teşhis ve tedavi uygulamaları</h3>
-        <p>Klinik muayene ile semptoma özel, hızlı ve kontrollü tedavi planlaması.</p>
-      </article>
-      <article class="service-card">
-        <span>05</span>
-        <h3>Rutin sağlık taramaları</h3>
-        <p>İştah, davranış, kilo ve genel kondisyon üzerinden düzenli sağlık kontrolleri.</p>
-      </article>
-      <article class="service-card">
-        <span>06</span>
-        <h3>Danışmanlık ve yönlendirme</h3>
-        <p>Bakım, beslenme ve süreç yönetimi için açık, uygulanabilir öneriler.</p>
-      </article>
-    </div>
-  </section>
-
-  <section class="metrics-section">
-    <article>
-      <strong>Tek merkez</strong>
-      <span>Evcil hayvan, çiftlik hayvanı ve arıcılık desteği aynı yaklaşım içinde.</span>
-    </article>
-    <article>
-      <strong>Planlı iletişim</strong>
-      <span>Telefonla hızlı ulaşım, konum bilgisi ve net randevu akışı.</span>
-    </article>
-    <article>
-      <strong>Yerel güven</strong>
-      <span>Çanakkale merkezde ailelerin ve üreticilerin tekrar tercih ettiği klinik deneyimi.</span>
-    </article>
-  </section>
-
-  <section class="gallery-section">
-    <div class="section-heading compact">
-      <p class="eyebrow">Klinikten Kareler</p>
-      <h2>Sakin, temiz ve güven veren bir bakım atmosferi</h2>
-    </div>
-
-    <div class="gallery-grid">
-      <figure class="gallery-card tall"><img src="/A.jpg" alt="Klinik görseli"></figure>
-      <figure class="gallery-card"><img src="/B.jpg" alt="Tedavi alanı"></figure>
-      <figure class="gallery-card"><img src="/C.jpg" alt="Muayene görseli"></figure>
-      <figure class="gallery-card wide"><img src="/D.jpg" alt="Can Vet klinik alanı"></figure>
-    </div>
-  </section>
-
-  <section class="specialties-section">
-    <div class="specialty-panel clinic-panel">
-      <p class="eyebrow">Veterinerlik</p>
-      <h2>Koruyucu bakım kadar, doğru anda müdahale de önemli.</h2>
-      <p>
-        Her vakada önce sakin değerlendirme, sonra uygulanabilir tedavi planı oluşturuyoruz. Bu yaklaşım hem
-        evcil dostlarda hem de çiftlik hayvanlarında daha öngörülebilir bir bakım süreci sağlıyor.
-      </p>
-    </div>
-
-    <div class="specialty-panel apiary-panel">
-      <img class="apiary-icon hive" src="/Bee Hive.png" alt="Kovan simgesi">
-      <img class="apiary-icon bees" src="/Bees.png" alt="Arılar simgesi">
-      <p class="eyebrow">Arıcılık Hizmetleri</p>
-      <h2>Koloni sağlığı için sezonluk ve sürdürülebilir takip.</h2>
-      <ul>
-        <li>Koloni genel sağlık kontrolü ve kovan değerlendirmesi</li>
-        <li>Varroa ve benzeri riskler için yönlendirme</li>
-        <li>Sezonluk bakım planlaması ve üretim danışmanlığı</li>
-        <li>Temel ekipman ve ihtiyaç planı hakkında destek</li>
-      </ul>
-    </div>
-  </section>
-
-  <section class="visit-section">
-    <div class="visit-card">
-      <p class="eyebrow">Ziyaret ve İletişim</p>
-      <h2>Kliniğe kolayca ulaşın, bakım sürecini vakit kaybetmeden başlatın.</h2>
-      <p>
-        Namık Kemal Mahallesi, Arap İbrahim Paşa Cd. No:98/A, 17010 Çanakkale Merkez / Çanakkale
-      </p>
-      <p>
-        Çanakkale merkez dışında Lapseki, Ezine, Biga, Bayramiç ve Çardak bölgelerinden gelen danışanlar için de
-        erişilebilir veteriner kliniği desteği sunuyoruz.
-      </p>
-      <div class="visit-actions">
-        <a class="primary-action" routerLink="/iletisim">İletişim Sayfası</a>
-        <a class="secondary-action" href="https://share.google/O31fc6nVx3KN56NcL" target="_blank"
-          rel="noreferrer">Yol Tarifi</a>
+      <div class="badge badge-vet">
+        <strong>Vet. Hekim Atanar Çelik</strong>
+        <span>Canvet Veteriner Kliniği</span>
       </div>
-    </div>
 
-    <div class="map-panel">
-      <iframe [src]="googleMapUrl" title="Can Vet konum haritası" loading="lazy"></iframe>
+      <a class="badge badge-emergency" href="tel:+902862127877">
+        <span class="badge-emergency-icon">
+          <img class="badge-icon" src="/figma/icon-phone-badge.svg" alt="" width="18" height="18">
+          <img class="badge-icon-mobile" src="/figma/icon-phone-badge-14.svg" alt="" width="14" height="14">
+        </span>
+        <span class="badge-text">
+          <span class="badge-kicker">Acil Durum Saha Ekibi</span>
+          <strong>0286 212 78 77</strong>
+        </span>
+      </a>
     </div>
-  </section>
+  </div>
 </section>
+
+<!-- Hizmetlerimiz -->
+<section class="services" id="hizmetler">
+  <div class="container services-inner">
+    <header class="section-head services-head">
+      <div class="section-title">
+        <p class="eyebrow">Hizmetlerimiz</p>
+        <h2>Klinik güvenini, saha deneyimiyle tamamlayan bakım planları</h2>
+      </div>
+      <p class="section-lead">
+        Hem klinikteki bireysel dostlarımızın hem de sahadaki sürünün refahını hedefleyen düzenli veterinerlik
+        uygulamaları.
+      </p>
+    </header>
+
+    <div class="services-grid">
+      @for (service of services; track service.title; let i = $index) {
+        <article class="service-card" [style.--stack-index]="i">
+          <div class="service-head">
+            <span class="service-icon">
+              <img [src]="service.icon" alt="" width="24" height="24">
+            </span>
+            <span class="service-number" aria-hidden="true">{{ service.number }}</span>
+          </div>
+          <h3>{{ service.title }}</h3>
+          <p>{{ service.body }}</p>
+        </article>
+      }
+    </div>
+  </div>
+</section>
+
+<!-- Sahadan Kareler -->
+<section class="field">
+  <div class="container field-inner">
+    <header class="section-head field-head">
+      <div class="section-title">
+        <p class="eyebrow eyebrow-dark">Sahadan Kareler</p>
+        <h2>Aktif Saha Hekimliğinden Anlar</h2>
+      </div>
+      <p class="field-hint field-hint-hover">
+        <img src="/figma/icon-rotate-hint.svg" alt="" width="16" height="16">
+        <span>Detaylar için kartların üzerine gelin</span>
+      </p>
+      <p class="field-hint field-hint-scroll">
+        <img src="/figma/icon-rotate-hint-14.svg" alt="" width="14" height="14">
+        <span>Kaydırdıkça kartlar dönerek detayları gösterir</span>
+      </p>
+    </header>
+
+    <div class="field-gallery-grid" #fieldGalleryGrid>
+      @for (card of fieldCards; track card.label) {
+        <article class="field-gallery-card" tabindex="0">
+          <div class="flip-inner">
+            <div class="flip-face flip-front">
+              <img class="flip-photo" [src]="card.image" [alt]="card.alt" [style.object-position]="card.position"
+                loading="lazy">
+              <span class="flip-overlay"></span>
+              <span class="flip-hint">
+                <img src="/figma/icon-rotate.svg" alt="" width="16" height="16">
+              </span>
+              <span class="flip-label">{{ card.label }}</span>
+            </div>
+            <div class="flip-face flip-back">
+              <span class="flip-hint">
+                <img src="/figma/icon-rotate-hint.svg" alt="" width="16" height="16">
+              </span>
+              <span class="flip-line"></span>
+              <span class="flip-kicker">{{ card.kicker }}</span>
+              <h3>{{ card.label }}</h3>
+              @if (card.body) {
+                <p>{{ card.body }}</p>
+              }
+            </div>
+          </div>
+        </article>
+      }
+    </div>
+  </div>
+</section>
+
+<!-- Arı Hekimliği -->
+<section class="bee">
+  <div class="container bee-inner">
+    <div class="bee-copy">
+      <p class="eyebrow">Arı Hekimliği &amp; Koloni Takibi</p>
+      <h2>Koloni sağlığı için sezonluk ve sürdürülebilir takip.</h2>
+      <p class="section-lead">
+        Çanakkale ve çevresindeki arı yetiştiricileri için kovan sağlığı, parazit baskısı ve üretim verimliliğini
+        bilimsel koruyucu yaklaşımla destekliyoruz.
+      </p>
+
+      <ul class="checklist">
+        @for (item of beeChecklist; track item) {
+          <li>
+            <img src="/figma/icon-check.svg" alt="" width="24" height="24">
+            <span>{{ item }}</span>
+          </li>
+        }
+      </ul>
+
+      <div class="bee-cta">
+        <a class="btn btn-primary" routerLink="/iletisim">
+          <img src="/figma/icon-calendar-btn.svg" alt="" width="18" height="18">
+          <span>Koloni Randevusu ve Görüşme Al</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="bee-visual">
+      <img class="bee-hex bee-hex-1" src="/figma/bee-hex-1.svg" alt="" width="72" height="72">
+      <img class="bee-hex bee-hex-2" src="/figma/bee-hex-2.svg" alt="" width="50" height="50">
+      <img class="bee-hex bee-hex-3" src="/figma/bee-hex-3.svg" alt="" width="92" height="92">
+      <img class="bee-hex bee-hex-4" src="/figma/bee-hex-4.svg" alt="" width="46" height="46">
+      <img class="bee-hex bee-hex-5" src="/figma/bee-hex-5.svg" alt="" width="62" height="62">
+      <img class="bee-hex bee-hex-fill" src="/figma/bee-hex-fill.svg" alt="" width="104" height="120">
+      <img class="bee-hex-mobile bee-hex-mobile-1" src="/figma/bee-hex-mobile-1.svg" alt="" width="43" height="50">
+      <img class="bee-hex-mobile bee-hex-mobile-2" src="/figma/bee-hex-mobile-2.svg" alt="" width="50" height="58">
+      <img class="bee-hex-mobile bee-hex-mobile-3" src="/figma/bee-hex-mobile-3.svg" alt="" width="36" height="42">
+
+      <img class="bee-outline" src="/figma/bee-blob-outline.svg" alt="" width="502" height="556">
+      <img class="bee-outline-mobile" src="/figma/bee-blob-outline-mobile.svg" alt="" width="302" height="334">
+      <div class="bee-photo">
+        <img src="/card5.jpg" alt="Arıcı, ayçiçeği tarlasında bal peteği çerçevesini kontrol ediyor" loading="lazy">
+      </div>
+      <img class="bee-macro" src="/card7.jpg" alt="Mor çiçek üzerinde bal arısı" loading="lazy">
+
+      <div class="badge badge-icon-row badge-hive">
+        <span class="badge-tile">
+          <img src="/figma/icon-hexagon.svg" alt="" width="24" height="24">
+        </span>
+        <span class="badge-text">
+          <span class="badge-kicker">Kovan İçi Teşhis</span>
+          <strong>Çerçeve &amp; Petek Muayenesi</strong>
+        </span>
+      </div>
+      <div class="badge badge-icon-row badge-season">
+        <span class="badge-tile">
+          <img src="/figma/icon-flower.svg" alt="" width="24" height="24">
+        </span>
+        <span class="badge-text">
+          <span class="badge-kicker">Sezonluk Müdahale</span>
+          <strong>Kovan Sağlığı &amp; Duman</strong>
+        </span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- İletişim & Harita -->
+<app-contact-panel></app-contact-panel>
